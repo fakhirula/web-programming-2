@@ -8,31 +8,27 @@
 </head>
 <body>
     
-    <?php 
-
-    if (isset($_POST['proses'])) {
+    <?php
 
         // Variable untuk menampung data
-        $nama_siswa = $_POST['nama_lengkap'];
-        $mata_kuliah = $_POST['matkul'];
+        $name = $_POST['nama_lengkap'];
+        $matkul = $_POST['matkul'];
         $uts = $_POST['nilai_uts'];
         $uas = $_POST['nilai_uas'];
         $tugas = $_POST['nilai_tugas'];
 
-        $total_nilai = ($uts * 0.3) + ($uas * 0.35) + ($tugas * 0.35);
+        $total = ($uts * 0.3) + ($uas * 0.35) + ($tugas * 0.35);
 
         // Tampilkan data dari variable
-        echo '<br>Nama Siswa : ' . $nama_siswa;
-        echo '<br>Mata Kuliah : ' . $mata_kuliah;
-        echo '<br>Nilai UTS : ' . $uts;
-        echo '<br>Nilai UAS : ' . $uas;
-        echo '<br>Nilai Tugas : ' . $tugas;
+        echo '<br>Nama siswa : '. $name;
+        echo '<br>Mata kuliah : '. $matkul;
+        echo '<br>Nilai UTS : '. $uts;
+        echo '<br>Nilai UAS : '. $uas;
+        echo '<br>Nilai Tugas : '. $tugas;
         echo '<hr>';
-        echo '<br>Total Nilai : ' . $total_nilai;
+        echo 'Total Nilai : ' . $total;
         echo '<hr>';
 
-    }
-    
     ?>
 
 </body>

@@ -11,7 +11,7 @@
 
 <body>
 
-    <form class="w-75 mt-5 mx-auto p-4 border shadow-sm" method="GET" action="form_belanja.php">
+    <form method="GET" action="form_belanja.php" class="w-75 mt-5 mx-auto p-4 border shadow-sm">
         <h2>Form Belanja</h2>
         <hr />
         <div class="container px-3">
@@ -41,7 +41,7 @@
             <div class="form-group row">
                 <label for="jumlah" class="col-4 col-form-label">Jumlah</label>
                 <div class="col-8">
-                    <input name="jumlah" id="jumlah" placeholder="Jumlah beli" type="number" min=0 class="form-control" required>
+                    <input name="jml_beli" id="jumlah" placeholder="Jumlah beli" type="number" min=0 class="form-control" required>
                 </div>
             </div>
             <div class="form-group row">
@@ -61,34 +61,35 @@
     </form>
 
     <?php
-    
-    if (isset($_GET['submit'])) {
 
-        // Variable untuk menyimpan data
+    if(isset($_GET['submit'])) {
+
+        // Tampung data menggunakan variable
         $custname = $_GET['customer_name'];
         $produk = $_GET['produk'];
-        $jumlah = $_GET['jumlah'];
+        $jumlah_beli = $_GET['jml_beli'];
 
         switch ($produk) {
             case "baju":
-                $total = $jumlah * 100000;
+                $total = $jumlah_beli * 100000;
                 break;
             case "topi":
-                $total = $jumlah * 20000;
+                $total = $jumlah_beli * 20000;
                 break;
             case "jamtangan":
-                $total = $jumlah * 150000;
+                $total = $jumlah_beli * 150000;
                 break;
         }
 
-
         // Tampilkan data dari variable
-        echo '<br>Nama Customer : ' . $custname;
-        echo '<br>Produk Pilihan : ' . $produk; 
-        echo '<br>Jumlah Beli : ' . $jumlah;
-        echo '<br>Total Belanja : ' . $total;
+        echo '<br>Nama customer : ' . $custname;
+        echo '<br>Produk pilihan : ' . $produk;
+        echo '<br>Jumlah beli : ' . $jumlah_beli;
+        echo '<br>Total harga : ' . $total;
 
-    }   
+    }
+
+        
 
     ?>
 

@@ -31,44 +31,40 @@
     ];
   */
 
-    // Simple Array 
-    // Berdasarkan index 
-    $fruits = ['Pisang','Melon','Berry'];
+    // Simple Array
+    $fruits = ["Pisang","Melon","Berry"];
     
-    print_r($fruits);
-
-    foreach ($fruits as $fruit) {
+    foreach($fruits as $fruit){
         echo $fruit;
         echo '<br>';
     }
 
-    echo "<br><br>";
-
     // Associative Array
-    // Berdasarkan key dan value
+    // Pasangan key dan value
+    echo '<br><br>';
+
     $a_fruits = [
         "Pisang" => "Kuning",
         "Melon" => "Hijau",
         "Berry" => "Merah"
     ];
 
-    print_r($a_fruits);
-
-    foreach ($a_fruits as $fruit) {
+    foreach($a_fruits as $fruit){
         echo $fruit;
-        echo "<br>";
+        echo '<br>';
     }
 
-    echo "<br><br>";
 
     // Multidimensional Array
+    echo '<br><br>';
+
     $m_fruits = [
-    ["name" => "Pisang", "color" => "Kuning", "stock" => 20, "price" => 15000, "description" => "Pisang dengan rasa manis"],
-    ["name" => "Melon", "color" => "Hijau", "stock" => 15, "price" => 28000, "description" => "Buah berwarna hijau yang segar"],
-    ["name" => "Berry", "color" => "Merah", "stock" => 8, "price" => 12000, "description" => "Buah kecil dengan biji yang bisa dimakan"]
+      ["name" => "Pisang", "color" => "Kuning", "stock" => 20, "price" => 15000, "description" => "Pisang dengan rasa manis"],
+      ["name" => "Melon", "color" => "Hijau", "stock" => 15, "price" => 28000, "description" => "Buah berwarna hijau yang segar"],
+      ["name" => "Berry", "color" => "Merah", "stock" => 8, "price" => 12000, "description" => "Buah kecil dengan biji yang bisa dimakan"]
     ];
 
-    foreach($m_fruits as $fruit) {
+    foreach($m_fruits as $fruit){
         echo '<li>' . $fruit["name"] . '</li>';
         echo '<li>' . $fruit["color"] . '</li>';
         echo '<li>' . $fruit["stock"] . '</li>';
