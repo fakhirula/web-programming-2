@@ -1,6 +1,6 @@
 <?php 
 // Include file koneksi database
-require_once 'dbkoneksi.php';
+require_once '../dbkoneksi.php';
 
 // Ambil data dari form
 $_kode = $_POST['kode'];
@@ -28,7 +28,7 @@ if($_proses == "Simpan"){
     min_stok,jenis_produk_id) VALUES (?,?,?,?,?,?,?)";
 }else if($_proses == "Update"){
     // Jika Update, tambahkan ID ke array dan buat SQL UPDATE
-    $ar_data[]=$_POST['idedit'];
+    $ar_data[]=$_POST['id'];
     $sql = "UPDATE produk SET kode=?,nama=?,harga_beli=?,harga_jual=?,
     stok=?,min_stok=?,jenis_produk_id=? WHERE id=?";
 }

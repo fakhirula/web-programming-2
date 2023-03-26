@@ -1,16 +1,19 @@
 <?php 
-require_once 'dbkoneksi.php';
+require_once '../dbkoneksi.php';
 ?>
+
 <?php 
-    $_idedit = isset($_GET['idedit']) ? $_GET['idedit'] : null;
-    if(!empty($_idedit)){
-        // edit
+    // cek apakah terdapat parameter id pada URL, jika ada maka dilakukan edit data
+    $_id = isset($_GET['id']) ? $_GET['id'] : null;
+    if(!empty($_id)){
+        // ambil data produk berdasarkan id
         $sql = "SELECT * FROM produk WHERE id=?";
         $st = $dbh->prepare($sql);
-        $st->execute([$_idedit]);
+        $st->execute([$_id]);
         $row = $st->fetch();
     }else{
-        // new data
+        // jika tidak ada parameter id pada URL, maka dianggap input data baru
+        // inisialisasi variabel $row sebagai array kosong
         $row = [];
     }
 ?>
@@ -108,11 +111,11 @@ require_once 'dbkoneksi.php';
   <div class="form-group row">
     <div class="offset-4 col-8">
     <?php
-        $button = (empty($_idedit)) ? "Simpan":"Update"; 
+        $button = (empty($_id)) ? "Simpan":"Update"; 
     ?>
       <input type="submit" name="proses" type="submit" 
       class="btn btn-primary" value="<?=$button?>"/>
-      <input type="hidden" name="idedit" value="<?=$_idedit?>"/>
+      <input type="hidden" name="id" value="<?=$_id?>"/>
     </div>
   </div>
 </form>
