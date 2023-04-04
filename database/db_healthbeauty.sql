@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 02, 2023 at 02:24 PM
+-- Generation Time: Apr 04, 2023 at 06:53 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -202,13 +202,15 @@ INSERT INTO `supplier` (`id`, `name`, `phone`, `address`, `contact_name`) VALUES
 -- Indexes for table `card`
 --
 ALTER TABLE `card`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `code` (`code`);
 
 --
 -- Indexes for table `customer`
 --
 ALTER TABLE `customer`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`),
   ADD KEY `fk_customer_card1` (`card_id`);
 
 --
@@ -216,6 +218,7 @@ ALTER TABLE `customer`
 --
 ALTER TABLE `order`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `order_number` (`order_number`),
   ADD KEY `fk_order_customer` (`customer_id`),
   ADD KEY `fk_order_product1` (`product_id`);
 
@@ -224,6 +227,7 @@ ALTER TABLE `order`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `sku` (`sku`),
   ADD KEY `fk_product_product_type1` (`product_type_id`),
   ADD KEY `fk_product_restock1` (`restock_id`);
 
@@ -238,6 +242,7 @@ ALTER TABLE `product_type`
 --
 ALTER TABLE `restock`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `restock_number` (`restock_number`),
   ADD KEY `fk_restock_supplier1` (`supplier_id`);
 
 --
