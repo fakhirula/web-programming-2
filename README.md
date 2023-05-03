@@ -13,11 +13,12 @@ Buatlah halaman Genres, Reviews dan Users:
 
 > Berisi data nama, username, password, email dan role
 
-Hints:
 
+Hints:
 1. Atur routing dengan baik
 2. Gunakan template engine
 3. Berikan masing-masing halaman minimal 5 data
 4. Rapihkan halaman web
+
 
 **Note**: Detailnya cek pada modul [s.id/notionPW2](s.id/notionPW2).
