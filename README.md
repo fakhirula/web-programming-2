@@ -19,4 +19,4 @@ Hints:
 3. Berikan masing-masing halaman minimal 5 data
 4. Rapihkan halaman web
 
-**Note**: Detailnya cek pada modul [s.id/notionPW2](s.id/notionPW2).
+**Note**: Detailnya cek pada modul [s.id/notionPW2](https://s.id/notionPW2).
