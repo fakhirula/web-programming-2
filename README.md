@@ -1,5 +1,9 @@
 # Task
 Buatlah halaman Genres, Reviews dan Users:
+1. Atur routing dengan baik
+2. Berikan masing-masing model minimal 5 data array
+3. Tampilkan data model ke masing-masing view
+4. Rapihkan halaman web
 
 #### Halaman Genres:
 
@@ -12,11 +16,5 @@ Buatlah halaman Genres, Reviews dan Users:
 #### Halaman Users:
 
 > Berisi data nama, username, password, email dan role
-
-Hints:
-1. Atur routing dengan baik
-2. Gunakan template engine
-3. Berikan masing-masing halaman minimal 5 data
-4. Rapihkan halaman web
 
 **Note**: Detailnya cek pada modul [s.id/notionPW2](https://s.id/notionPW2).
