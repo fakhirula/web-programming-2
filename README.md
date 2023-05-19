@@ -1,5 +1,5 @@
 # Task
-Buatlah halaman Genres, Reviews dan Users:
+Buatlah halaman Genres dan Reviews:
 
 #### Halaman Genres:
 
@@ -8,10 +8,6 @@ Buatlah halaman Genres, Reviews dan Users:
 #### Halaman Reviews:
 
 > Berisi data film, user, rating, review dan tanggal review
-
-#### Halaman Users:
-
-> Berisi data nama, username, password, email dan role
 
 Hints:
 1. Atur routing dengan baik
