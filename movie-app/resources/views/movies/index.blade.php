@@ -48,7 +48,7 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $movie->judul }}</td>
                             <td>{{ $movie->poster }}</td>
-                            <td>{{ $movie->genre }}</td>
+                            <td>{{ $movie->genre->nama }}</td>
                             <td>{{ $movie->negara }}</td>
                             <td>{{ $movie->tahun }}</td>
                             <td>{{ $movie->rating }}</td>

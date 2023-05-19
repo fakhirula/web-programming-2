@@ -1,13 +1,14 @@
 # Task
-Buatlah halaman Genres, Reviews dan Users:
-1. Atur routing dengan baik
-2. Berikan masing-masing model minimal 5 data array
-3. Tampilkan data model ke masing-masing view
-4. Rapihkan halaman web
+Lanjutkan halaman Genres dan Reviews:
+1. Buat migration untuk masing-masing halaman
+2. Berikan seeder untuk tiap halaman minimal 5 data
+3. Tampilkan data dari database ke view (Eloquent)
+4. Jangan lupa gunakan relasi
+5. Rapihkan halaman web
 
 #### Halaman Genres:
 
-> Berisi data nomor, genre dan deskripsi
+> Berisi data no, genre dan deskripsi
 
 #### Halaman Reviews:
 
