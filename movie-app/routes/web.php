@@ -18,7 +18,11 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/movies', [MovieController::class, 'index']);
+Route::resource('/movies', MovieController::class);
+// Route::get('/movies', [MovieController::class, 'index']);
+// Route::get('/movies/create', [MovieController::class, 'create']);
+// Route::post('/movies', [MovieController::class, 'store']);  
+// Route::delete('/movies/{movie}', [MovieController::class, 'destroy'])->name('movies.destroy');
 
 Route::get('/genres', function () {
     return view('genres/index');
