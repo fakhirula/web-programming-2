@@ -14,8 +14,4 @@ Lanjutkan halaman Genres dan Reviews:
 
 > Berisi data film, user, rating, review dan tanggal review
 
-#### Halaman Users:
-
-> Berisi data nama, username, password, email dan role
-
 **Note**: Detailnya cek pada modul [s.id/notionPW2](https://s.id/notionPW2).

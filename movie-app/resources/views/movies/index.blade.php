@@ -59,7 +59,7 @@
                             <td>{{ $movie->rating }}</td>
                             <td>
                                 <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                                <form action="{{ route('movies.destroy', $movie) }}" method="POST" style="display: inline;">
+                                <form action="/movies/{{ $movie->id }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus?')">Delete</button>
