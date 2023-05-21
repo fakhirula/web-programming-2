@@ -1,7 +1,6 @@
 # Task
 Lanjutkan halaman Genres dan Reviews:
-1. Buat migration untuk masing-masing halaman
-2. Berikan seeder untuk tiap halaman minimal 5 data
+1. Buat fitur edit untuk masing-masing halaman
 3. Tampilkan data dari database ke view (Eloquent)
 4. Jangan lupa gunakan relasi
 5. Rapihkan halaman web
