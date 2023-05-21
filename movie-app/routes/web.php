@@ -18,13 +18,10 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::resource('/movies', MovieController::class);
-// Route::get('/movies', [MovieController::class, 'index']);
-// Route::get('/movies/create', [MovieController::class, 'create']);
-// Route::post('/movies', [MovieController::class, 'store']);  
-// Route::delete('/movies/{movie}', [MovieController::class, 'destroy']);
-// Route::get('/movies/{movie}/edit', [MovieController::class, 'edit']);
-// Route::put('/movies/{movie}', [MovieController::class, 'update']);
+Route::get('/movies', [MovieController::class, 'index']);
+Route::get('/movies/create', [MovieController::class, 'create']);
+Route::post('/movies', [MovieController::class, 'store']);  
+Route::delete('/movies/{movie}', [MovieController::class, 'destroy']);
 
 Route::get('/genres', function () {
     return view('genres/index');

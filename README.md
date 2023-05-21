@@ -1,6 +1,6 @@
 # Task
 Lanjutkan halaman Genres dan Reviews:
-1. Buat fitur Edit untuk masing-masing halaman
+1. Buat fitur Create dan Delete untuk masing-masing halaman
 2. Gunakan CSRF & Validation dengan baik
 3. Tampilkan data dari database ke view (Eloquent)
 4. Jangan lupa gunakan relasi
