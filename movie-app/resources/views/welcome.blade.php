@@ -33,7 +33,7 @@
                         </li>
                     </ul>
                 <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-                    <a href="#" class="btn btn-warning">Login</a>
+                    <a href="/login" class="btn btn-warning">Login</a>
                 </div>
                 </div>
             </div>
