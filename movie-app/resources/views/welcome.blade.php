@@ -41,6 +41,11 @@
 
         <div class="p-5 mb-4 bg-body-tertiary rounded-3">
             <div class="container">
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
                 <div class="container-fluid py-5">
                     <h1 class="display-5 fw-bold">Watch anywhere. Cancel anytime.</h1>
                     <p class="col-md-8 fs-4">Dapatkan pembaruan tentang rilis film terkini, trailer eksklusif, dan berita terbaru dari dunia perfilman. Tunggu apa lagi? Mulailah menjelajahi dunia hiburan dengan FilmFlix sekarang juga!</p>
