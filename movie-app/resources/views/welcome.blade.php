@@ -23,13 +23,13 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" href="/movies">Movies</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" href="/genres">Genres</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="#">Reviews</a>
                         </li>
                     </ul>
                 <div class="d-lg-flex col-lg-3 justify-content-lg-end">
@@ -62,7 +62,7 @@
                     @foreach ($movies as $movie)
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="https://dummyimage.com/600x400/808080/fff.png">
+                            <img src="/assets/img/{{ $movie->poster }}">
                             <div class="card-body">
                                 <h4 class="card-title"><a href="#">{{ $movie->judul }}</a></h4>
                                 <p class="card-text">Genre: {{ $movie->genre->nama }}</p>
