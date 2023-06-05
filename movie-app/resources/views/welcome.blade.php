@@ -23,13 +23,13 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" href="/movies">Movies</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" href="/genres">Genres</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="#">Reviews</a>
                         </li>
                     </ul>
                 <div class="d-lg-flex col-lg-3 justify-content-lg-end">
@@ -41,6 +41,11 @@
 
         <div class="p-5 mb-4 bg-body-tertiary rounded-3">
             <div class="container">
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
                 <div class="container-fluid py-5">
                     <h1 class="display-5 fw-bold">Watch anywhere. Cancel anytime.</h1>
                     <p class="col-md-8 fs-4">Dapatkan pembaruan tentang rilis film terkini, trailer eksklusif, dan berita terbaru dari dunia perfilman. Tunggu apa lagi? Mulailah menjelajahi dunia hiburan dengan FilmFlix sekarang juga!</p>
