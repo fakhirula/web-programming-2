@@ -23,7 +23,12 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($validatedData)) {
-            return redirect('/')->with('success', 'Login successfully');
+            $user = Auth::user();
+            if ($user->role == 'admin') {
+                return redirect('/movies')->with('success', 'Login successfully as admin');
+            } else {
+                return redirect('/')->with('success', 'Login successfully as user');
+            }
         }
 
         return back()->withErrors([
