@@ -20,23 +20,8 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::resource('/movies', MovieController::class);
 
-Route::get('/genres', function () {
-    return view('genres/index');
-});
-
-Route::get('/reviews', function () {
-    return view('reviews/index');
-});
-
-Route::get('/users', function () {
-    return view('users/index');
-});
-
-
-Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
-Route::post('/register', [AuthController::class, 'register']);
-
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::get('/login', [AuthController::class, 'showLoginForm']);
 Route::post('/login', [AuthController::class, 'login']);
 
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/register', [AuthController::class, 'showRegistrationForm']);
+Route::post('/register', [AuthController::class, 'register']);
